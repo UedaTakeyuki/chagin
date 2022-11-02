@@ -18,6 +18,6 @@ func RespondErr(c *gin.Context, err error) {
 
 	log.Println(err, f.Name(), file, line)
 	c.JSON(500, gin.H{
-		"err": err,
+		"err": err.Error(),
 	})
 }
